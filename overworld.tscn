@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dpa0mo5511g0p"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 196.0
+offset_bottom = 94.0
+text = "blah blah bloop"
