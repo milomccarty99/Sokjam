@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpa0mo5511g0p"]
+
+[ext_resource type="ArrayMesh" uid="uid://dhakaocx6mm7n" path="res://assets/3Dobjects/unnamed_3.obj" id="1_owkaf"]
+[ext_resource type="Texture2D" uid="uid://cwsead08fx74h" path="res://assets/3Dobjects/unnamed_3_tex.png" id="2_6d0g5"]
+[ext_resource type="Script" path="res://scripts/player.cs" id="3_d2fvl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_58paa"]
+albedo_texture = ExtResource("2_6d0g5")
+texture_filter = 0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 24.0
+offset_top = 58.0
+offset_right = 220.0
+offset_bottom = 152.0
+text = "score: 0
+"
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000837088, -0.00806785, -0.00375175)
+
+[node name="Unnamed3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86058, -0.037264, 0.506518)
+mesh = ExtResource("1_owkaf")
+
+[node name="Unnamed4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42082, 0, -0.964999)
+material_override = SubResource("StandardMaterial3D_58paa")
+mesh = ExtResource("1_owkaf")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71185, 0.49895, -1.24571)
+omni_range = 6.341
+omni_attenuation = 0.112657
+
+[node name="Unnamed5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10582, 0, -0.484578)
+mesh = ExtResource("1_owkaf")
+
+[node name="player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 3.945)
+script = ExtResource("3_d2fvl")
+
+[node name="Camera3D" type="Camera3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
